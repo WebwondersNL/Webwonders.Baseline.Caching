@@ -17,7 +17,8 @@ public class ResponseCaching : IConfigureOptions<StaticFileOptions>
         IHostingEnvironment hostingEnvironment,
         IOptions<ResponseCachingOptions> options)
     {
-        _backOfficePath = hostingEnvironment.GetBackOfficePath();
+        //_backOfficePath = hostingEnvironment.GetBackOfficePath(); For Version 16.
+        _backOfficePath = "/umbraco";
         _options = options.Value;
     }
 
